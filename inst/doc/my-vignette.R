@@ -14,7 +14,5 @@ kable(dt, table.attr = "style='width:100%;'")
 ## ---- eval=TRUE, cache=TRUE, fig.width=6, fig.height=6-------------------
 library(streetview)
 l.plots <- streetview::plot_panoids(path.root = '~/Dropbox/pkg.data')
-l.plots$hist
 l.plots$year
-l.plots$quarter
 
