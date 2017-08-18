@@ -11,8 +11,9 @@ dt <- data.table(address = '6975 E Sandown Rd, Denver, CO 80216',
                  )
 kable(dt, table.attr = "style='width:100%;'")
 
-## ---- eval=TRUE, cache=TRUE----------------------------------------------
-l.plots <- plot_panoids(path.root = '~/Dropbox/pkg.data')
+## ---- eval=TRUE, cache=TRUE, fig.width=6, fig.height=6-------------------
+library(streetview)
+l.plots <- streetview::plot_panoids(path.root = '~/Dropbox/pkg.data')
 l.plots$hist
 l.plots$year
 l.plots$quarter
