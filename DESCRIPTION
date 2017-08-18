@@ -1,0 +1,23 @@
+Package: streetview
+Type: Package
+Title: streetview picture scrape
+Version: 0.1.0
+Author: Erik Johnson
+Maintainer: Erik Johnson <erikbjohn@gmail.com>
+Description: Cleans fields and reprojects shapefiles.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: api.keys,
+  data.table,
+  ggplot2,
+  ggthemes,
+  pkg.data.paths,
+  rjson,
+  stringr,
+  utils,
+  lubridate
+RoxygenNote: 6.0.1.9000
+Suggests: knitr,
+   rmarkdown
+VignetteBuilder: knitr
