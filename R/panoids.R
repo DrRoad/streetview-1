@@ -95,7 +95,7 @@ get_panoids <- function(path.root = NULL, query.addresses = NULL, n.echo =10){
 #' @export
 #' @importFrom pkg.data.paths paths
 #' @importFrom ggthemes theme_map theme_tufte
-#' @importFrom ggplot2 ggplot geom_point scale_color_brewer geom_bar scale_fill_brewer
+#' @importFrom ggplot2 ggplot geom_point scale_color_brewer geom_bar scale_fill_brewer aes
 plot_panoids <- function(path.root = NULL, l.extent= NULL){
   dt.quarter <- NULL; dt.year <- NULL; location.lat <- NULL; location.lng <- NULL; pano_id <- NULL;
   aes <- NULL;
