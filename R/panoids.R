@@ -96,7 +96,7 @@ get_panoids <- function(path.root = NULL, query.addresses = NULL, n.echo =10){
 #' @importFrom pkg.data.paths paths
 #' @importFrom ggthemes theme_map theme_tufte
 #' @importFrom ggplot2 ggplot geom_point scale_color_brewer geom_bar scale_fill_brewer
-plot_panoids <- function(path.root, l.extent= NULL){
+plot_panoids <- function(path.root = NULL, l.extent= NULL){
   dt.quarter <- NULL; dt.year <- NULL; location.lat <- NULL; location.lng <- NULL; pano_id <- NULL;
   aes <- NULL;
   get.panoids.paths <- pkg.data.paths::paths(path.root = path.root, str.pkg.name = 'streetview')
