@@ -21,3 +21,5 @@
 *.utf8.md
 *.knit.md
 .Rproj.user
+# Vignette files
+/*.my-vignette_cache/
