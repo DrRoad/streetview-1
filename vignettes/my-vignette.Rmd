@@ -35,8 +35,12 @@ kable(dt, table.attr = "style='width:100%;'")
 ```
 
 # plot_panoids
-
-
+```{r, eval=TRUE, cache=TRUE}
+l.plots <- plot_panoids(path.root = '~/Dropbox/pkg.data')
+l.plots$hist
+l.plots$year
+l.plots$quarter
+```
 
 
 
