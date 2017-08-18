@@ -98,7 +98,6 @@ get_panoids <- function(path.root = NULL, query.addresses = NULL, n.echo =10){
 #' @importFrom ggplot2 ggplot geom_point scale_color_brewer geom_bar scale_fill_brewer aes
 plot_panoids <- function(path.root = NULL, l.extent= NULL){
   dt.quarter <- NULL; dt.year <- NULL; location.lat <- NULL; location.lng <- NULL; pano_id <- NULL;
-  aes <- NULL;
   get.panoids.paths <- pkg.data.paths::paths(path.root = path.root, str.pkg.name = 'streetview')
   panoids.clean.path <- paste0(get.panoids.paths$pkg.root[[1]], '/clean/panoids.rdata')
   load(panoids.clean.path)
@@ -109,18 +108,18 @@ plot_panoids <- function(path.root = NULL, l.extent= NULL){
   # Define data types for panoids
   # Plot years
   l.plot <- list()
-  l.plot$year <- ggplot2::ggplot(panoids, aes(location.lng, location.lat, colour=as.factor(dt.year))) + 
+  l.plot$year <- ggplot2::ggplot(panoids, ggplot2::aes(location.lng, location.lat, colour=as.factor(dt.year))) + 
     ggplot2::geom_point(size=0.4, alpha=0.75) + 
     ggplot2::scale_color_brewer(palette = "Spectral", guide = "legend", name=NULL) +
     ggthemes::theme_map(base_size = 12)
   
-  l.plot$quarter <- ggplot2::ggplot(panoids, aes(location.lng, location.lat,
+  l.plot$quarter <- ggplot2::ggplot(panoids, ggplot2::aes(location.lng, location.lat,
                                                  colour=as.factor(dt.quarter))) + 
     ggplot2::geom_point(size=0.4, alpha=0.75) + 
     ggplot2::scale_color_brewer(palette = "RdYlBu", guide = "legend", name='Quarter', direction=-1) +
     ggthemes::theme_map(base_size = 12)
   
-  l.plot$hist <-  ggplot2::ggplot(panoids, aes(x=as.factor(dt.year), fill=as.factor(dt.year))) + 
+  l.plot$hist <-  ggplot2::ggplot(panoids, ggplot2::aes(x=as.factor(dt.year), fill=as.factor(dt.year))) + 
     ggplot2::geom_bar() +
     ggplot2::scale_fill_brewer(palette = 'Spectral', guide = FALSE) +
     ggplot2::xlab(label= NULL) + 
